@@ -12,7 +12,8 @@
   :config
   (dashboard-setup-startup-hook))
 (dashboard-setup-startup-hook)
-(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+
+;;(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
 (setq dashboard-banner-logo-title "Have a nice day!")
 ;; Set the banner
 ;; Value can be
@@ -24,6 +25,9 @@
 ;; - a cons of '("path/to/your/image.png" . "path/to/your/text.txt")
 ;; Content is not centered by default. To center, set
 (setq dashboard-center-content t)
+(setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (agenda . 5)))
 ;; To disable shortcut "jump" indicators for each section, set
 (setq dashboard-show-shortcuts nil)
 (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
@@ -33,4 +37,5 @@
                                   (bookmarks . "nf-oct-book")))
 (setq dashboard-set-navigator t)
 ;; Format: "(icon title help action face prefix suffix)"
+(setq org-agenda-files '("~/day/"))
 (provide `init-dashboard)

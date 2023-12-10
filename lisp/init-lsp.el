@@ -4,7 +4,7 @@
           go-mode
           java-mode
           js-mode
-          python-mode
+;;          python-mode
           rust-mode
           web-mode) . eglot-ensure)
   :bind (("C-c e f" . #'eglot-format)
@@ -20,5 +20,4 @@
                 (call-interactively #'eglot-format)
                 (call-interactively #'eglot-code-action-organize-imports))))
   (add-hook 'eglot--managed-mode-hook #'eglot-actions-before-save))
-
 (provide `init-lsp)
