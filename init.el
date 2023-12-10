@@ -14,7 +14,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(all-the-icons-dired dirvish dashboard nerd-icons company epresent pdf-tools evil-org evil xenops smart-mode-line dracula-theme gruvbox-theme)))
+   '(org-roam-ui org-roam all-the-icons-dired dirvish dashboard nerd-icons company epresent pdf-tools evil-org evil xenops smart-mode-line dracula-theme gruvbox-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,3 +32,4 @@
 (require `init-lsp)
 (require `init-dashboard)
 (require `init-dirvish)
+(require `init-roam)
